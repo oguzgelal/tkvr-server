@@ -8,5 +8,4 @@ const tagsSchema = new Schema({
   updated: { type: Date, default: Date.now }
 });
 
-
 module.exports = mongoose.model('Tags', tagsSchema);
