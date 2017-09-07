@@ -7,5 +7,6 @@ router.route('/').get((req, res) => {
 });
 
 router.use('/tags', require('./model/tags/router'));
+router.use('/kvs', require('./model/kvs/router'));
 
 module.exports = router;
