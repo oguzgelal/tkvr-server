@@ -12,7 +12,7 @@ const tagsSchema = new Schema({
   tag_data: { type: Schema.Types.Mixed, required: true },
 
   // which app(s) should this be visible from
-  app: { type: [String], default: ['general'] }
+  app: { type: [String], default: ['general'] },
   
   
   /*--- resource the tag is attached ---*/
