@@ -4,9 +4,10 @@ class Error {
         this.options = {};
     }
 
-    throw(msg, code){
+    throw(msg, code, args){
         this.options.message = msg;
         this.options.status = code || 400;
+        this.options.args = args || {};
         return this._getJson();
     }
 
@@ -20,7 +21,8 @@ class Error {
         return {
             error: true,
             status: this.options.status || 500,
-            message: this.options.message || 'something went wrong'
+            message: this.options.message || 'something went wrong',
+            args: this.options.args || {}
         }
     }
 }
